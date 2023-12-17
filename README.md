@@ -1,2 +1,5 @@
-# pinescripts
-Collection of customized pinescripts
+# Pinescripts
+
+Collection of customized pinescripts used for TradingView platform.
+
+
