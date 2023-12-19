@@ -11,6 +11,9 @@ rsiOversold = input(title="RSI Oversold Level", type=input.integer, defval=30)
 isRsiOB = rsiValue >= rsiOverbought
 isRsiOS = rsiValue <= rsiOversold
 
+// Basic plan supports single alert
+alertcondition(isRsiOB or isRsiOS, title="RSI Alert!", message="RSI is in extemes! RSI: {{plot('rsi')}}; Price: {{close}}.")
+
 plotshape(isRsiOB,  title= "Overbought", location=location.abovebar, color=color.red, transp=0, style=shape.triangledown, text="OB")
 plotshape(isRsiOS, title= "Oversold", location=location.belowbar, color=color.green, transp=0, style=shape.triangleup, text="OS")
-plot(rsiValue)
+plot(rsiValue, title="rsi", display=display.none)
